@@ -2,17 +2,17 @@
   // children: ReactNode;
 } */
 
-import Navigation from './Navigation.tsx';
-import Heading from '../Typography/Heading.tsx';
-import HighlightLetter from '../Typography/HighlightLetter.tsx';
-import Paragraph from '../Typography/Paragraph.tsx';
-import HighlightText from '../Typography/HighlightText.tsx';
-import { OLENAS_INSTAGRAM } from '../../../utils/variables.ts';
-import ArrowIcon from '../UI/ArrowIcon.tsx';
+import Navigation from '../Navigation.tsx';
+import Heading from '../../Typography/Heading.tsx';
+import HighlightLetter from '../../Typography/HighlightLetter.tsx';
+import Paragraph from '../../Typography/Paragraph.tsx';
+import HighlightText from '../../Typography/HighlightText.tsx';
+import { OLENAS_INSTAGRAM } from '../../../../utils/variables.ts';
+import ArrowIcon from '../../UI/ArrowIcon.tsx';
 
 function Hero(/*{  }: HeroType*/) {
   return (
-    <>
+    <section className={`relative max-w-screen-xl m-auto pt-12`}>
       <div className={`mb-[76px]`}>
         <Navigation />
       </div>
@@ -57,7 +57,7 @@ function Hero(/*{  }: HeroType*/) {
           </div>
         )} />
       </div>
-    </>
+    </section>
   );
 }
 

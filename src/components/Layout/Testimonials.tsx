@@ -6,10 +6,6 @@ import Heading from '../Typography/Heading.tsx';
 import HighlightLetter from '../Typography/HighlightLetter.tsx';
 import Paragraph from '../Typography/Paragraph.tsx';
 import HighlightText from '../Typography/HighlightText.tsx';
-import TestimonialCard from '../UI/TestimonialCard.tsx';
-import UserImg1 from '../../assets/testimonials/user-icon-1.png';
-import UserImg2 from '../../assets/testimonials/user-icon-2.png';
-
 
 function Testimonials(/*{  }: TestimonialsType*/) {
   return (

@@ -2,14 +2,14 @@
   // children: ReactNode;
 } */
 
-import Photo1 from '../../assets/photography/photo-1.png';
-import Photo2 from '../../assets/photography/photo-2.png';
-import Photo3 from '../../assets/photography/photo-3.png';
-import Photo4 from '../../assets/photography/photo-4.png';
-import Photo5 from '../../assets/photography/photo-5.png';
-import Photo6 from '../../assets/photography/photo-6.png';
-import Photography from './Photography.tsx';
-import Tooltip from './Tooltip.tsx';
+import Photo1 from '../../../assets/photography/photo-1.png';
+import Photo2 from '../../../assets/photography/photo-2.png';
+import Photo3 from '../../../assets/photography/photo-3.png';
+import Photo4 from '../../../assets/photography/photo-4.png';
+import Photo5 from '../../../assets/photography/photo-5.png';
+import Photo6 from '../../../assets/photography/photo-6.png';
+import Photography from '../Photography.tsx';
+import Tooltip from '../Tooltip.tsx';
 
 function PhotographySection(/*{  }: PhotographySectionType*/) {
   return (

@@ -2,12 +2,12 @@
   // children: ReactNode;
 } */
 
-import Heading from '../Typography/Heading.tsx';
-import HighlightLetter from '../Typography/HighlightLetter.tsx';
-import Paragraph from '../Typography/Paragraph.tsx';
-import HighlightText from '../Typography/HighlightText.tsx';
-import Videography from './Videography.tsx';
-import Tooltip from './Tooltip.tsx';
+import Heading from '../../Typography/Heading.tsx';
+import HighlightLetter from '../../Typography/HighlightLetter.tsx';
+import Paragraph from '../../Typography/Paragraph.tsx';
+import HighlightText from '../../Typography/HighlightText.tsx';
+import Videography from '../Videography.tsx';
+import Tooltip from '../Tooltip.tsx';
 
 function VideoGraphySection(/*{  }: VideoGraphySectionType*/) {
   return (
