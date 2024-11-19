@@ -12,7 +12,7 @@ import Tooltip from './Tooltip.tsx';
 function VideoGraphySection(/*{  }: VideoGraphySectionType*/) {
   return (
     <>
-      <section>
+      <section className={`mb-14`}>
         <div className={`w-full max-w-screen-xl m-auto flex flex-col gap-9`}>
           <Heading heading={(
             <div>

@@ -1,6 +1,7 @@
 import Hero from './components/Layout/Hero.tsx';
 import PhotographySection from './components/Layout/PhotographySection.tsx';
 import VideoGraphySection from './components/Layout/VideoGraphySection.tsx';
+import TestimonialsSection from './components/Layout/TestimonialsSection.tsx';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <main>
           <PhotographySection />
           <VideoGraphySection />
+          <TestimonialsSection />
         </main>
       </div>
     </>
