@@ -1,17 +1,16 @@
-import './App.css';
-import Navigation from './components/Layout/Navigation.tsx';
+import Hero from './components/Layout/Hero.tsx';
 
 function App() {
   return (
-    <div>
-      <div className={`h-screen`}>
-        <Navigation />
-        <main>
-          <div>
+    <>
+      <div className={`w-full`}>
+        <div className={`h-screen bg-hero`}>
+          <div className={`relative max-w-screen-xl m-auto pt-12`}>
+            <Hero />
           </div>
-        </main>
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 

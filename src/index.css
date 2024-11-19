@@ -1,12 +1,43 @@
 @import url('https://fonts.googleapis.com/css2?family=Italiana&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lavishly+Yours&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+*:focus {
+    transition: all .3s;
+    outline: none;
+}
+
 body {
     background: #0C0C0C;
     color: #fff;
     font-family: 'Raleway', sans-serif;
+    text-align: left;
 }
+
+.bg-hero {
+    background-image: url('/src/assets/hero/hero.png');
+    background-size: cover;
+    background-position: center;
+}
+
+/*
+*::selection {
+  background-color: #fff;
+  color: #fff;
+}
+*/

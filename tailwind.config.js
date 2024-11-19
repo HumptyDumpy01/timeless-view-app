@@ -8,7 +8,8 @@ export default {
     extend: {
       fontFamily: {
         italiana: ['Italiana', 'serif'],
-        raleway: ['Raleway', 'sans-serif']
+        raleway: ['Raleway', 'sans-serif'],
+        lavishlyYours: ['Lavishly Yours', 'cursive']
       }
     }
   },

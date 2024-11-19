@@ -5,11 +5,12 @@
 }*/
 
 import Link from '../UI/Link.tsx';
+import { OLENAS_INSTAGRAM } from '../../../utils/variables.ts';
 
 export default function Navigation(/*{  }: NavigationType*/) {
   return (
     <>
-      <header className={`items-center max-w-screen-xl m-auto`}>
+      <header className={`items-center m-auto`}>
         <div className={`flex items-center justify-between`}>
           <div className={`flex items-center`}>
             <h2 className={`font-italiana text-2xl mr-24`}>Timeless View</h2>
@@ -23,7 +24,7 @@ export default function Navigation(/*{  }: NavigationType*/) {
           <div className={`flex items-center gap-7`}>
             <Link href={`
             tel:+1-234-567-8901`} label={`Contact me`} />
-            <Link shouldOpenNewTab href={`https://www.instagram.com/content_creator_olena?igsh=Z3I5aTUxZmxsbmox`}
+            <Link shouldOpenNewTab href={OLENAS_INSTAGRAM}
                   showArrowIcon
                   label={`My Instagram`} mode={`highlighted`} />
           </div>
