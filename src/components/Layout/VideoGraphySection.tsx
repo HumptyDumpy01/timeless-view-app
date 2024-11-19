@@ -7,6 +7,7 @@ import HighlightLetter from '../Typography/HighlightLetter.tsx';
 import Paragraph from '../Typography/Paragraph.tsx';
 import HighlightText from '../Typography/HighlightText.tsx';
 import Videography from './Videography.tsx';
+import Tooltip from './Tooltip.tsx';
 
 function VideoGraphySection(/*{  }: VideoGraphySectionType*/) {
   return (
@@ -29,6 +30,7 @@ function VideoGraphySection(/*{  }: VideoGraphySectionType*/) {
           </div>
         </div>
         <Videography />
+        <Tooltip label={`Scroll to the right to see more`} />
       </section>
     </>
   );
