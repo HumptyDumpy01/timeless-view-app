@@ -2,7 +2,7 @@
 
 function Videography(/*{  }: VideographyType*/) {
   return (
-    <div className={`flex overflow-x-auto scrollbar-hide gap-8 items-center`}>
+    <div className={`flex overflow-x-auto scrollbar-hide gap-8 items-center overflow-y-hidden`}>
       <div>
         <iframe
           width="400"
