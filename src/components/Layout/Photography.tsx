@@ -10,14 +10,14 @@ import HighlightText from '../Typography/HighlightText.tsx';
 function Photography(/*{  }: PhotographyType*/) {
   return (
     <>
-      <div className={`w-full max-w-screen-xl m-auto flex flex-col gap-9`}>
+      <div className={`w-full max-w-screen-xl m-auto flex flex-col gap-9 px-9`}>
         <Heading heading={(
-          <div className={`flex justify-end`}>
+          <div className={`flex bp-828:justify-end justify-start`}>
             <HighlightLetter text={`T`} />he <HighlightLetter text={`P`} />hotography <br />
             I am proud <HighlightLetter text={`O`} />f
           </div>
         )} />
-        <div className={`ml-auto`}>
+        <div className={`bp-828:ml-auto`}>
           <Paragraph text={(
             <>
               A gallery where every photo tells a story. From vibrant portraits to
