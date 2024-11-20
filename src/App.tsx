@@ -8,6 +8,8 @@ import Footer from './components/Layout/Footer.tsx';
 function App() {
   return (
     <>
+      <div id={`form`}>
+      </div>
       <div className={`w-full`}>
         <div className={`sm:h-screen bg-hero mb-16 pb-12`}>
           <Hero />
