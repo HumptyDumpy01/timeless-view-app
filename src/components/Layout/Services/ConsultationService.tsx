@@ -7,8 +7,8 @@ import FormButton from '../../UI/FormButton.tsx';
 
 function ConsultationService(/*{  }: ConsultationServiceType*/) {
   return (
-    <form>
-      <div className={`flex flex-col gap-12 mb-20`}>
+    <form className={`pr-4 sm:pr-0`}>
+      <div className={`flex flex-col gap-12 mb-20 w-full`}>
         <Input name={`name`} label={`your name`} placeholder={`e.g. Jane Doe`} />
         <Input name={`email`} label={`your email`} placeholder={`e.g. jane.doe@gmail.com`} />
         <Input name={`phone`} label={`your phone`} placeholder={`Your Phone`} />

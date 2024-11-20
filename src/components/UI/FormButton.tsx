@@ -6,7 +6,8 @@ interface FormButtonType {
 function FormButton({ label }: FormButtonType) {
   return (
     <>
-      <button className={`uppercase font-federo text-3xl border border-zinc-50 px-32 py-7`}>{label}</button>
+      <button
+        className={`uppercase font-federo text-nowrap sm:text-3xl text-2xl border border-zinc-50 sm:px-32 py-7 sm:w-fit w-full`}>{label}</button>
     </>
   );
 }

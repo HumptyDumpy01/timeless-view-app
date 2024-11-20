@@ -13,7 +13,7 @@ function Input({ placeholder, label, name, required = true }: InputType) {
         required={required}
         name={name}
         id={name}
-        className={`text-3xl bg-zinc-950 pb-6 border-b border-zinc-200 w-full
+        className={`sm:text-3xl text-2xl bg-zinc-950 pb-6 border-b border-zinc-200 w-full
                     transition-all duration-200 focus:border-amber-400 focus:placeholder-amber-400
                     focus:text-amber-400`}
         type="text"

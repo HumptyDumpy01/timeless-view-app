@@ -8,8 +8,13 @@ import ServiceContainer from '../ServiceContainer.tsx';
 import ConsultationService from '../Services/ConsultationService.tsx';
 import PhotographyService from '../Services/PhotographyService.tsx';
 import VideographyService from '../Services/VideographyService.tsx';
+import { useState } from 'react';
+
+
+export type MyServicesSectionType = `consultation` | `photography` | `videography`;
 
 function MyServicesSection(/*{  }: MyServicesSectionType*/) {
+  const [openedService, setOpenedService] = useState<MyServicesSectionType | false>(false);
   return (
     <section className={`w-full max-w-screen-xl px-4 bp-828:px-9 m-auto flex flex-col gap-9 mb-36`}>
       <div className={`uppercase sm:mb-20 mb-4`}>
@@ -22,6 +27,8 @@ function MyServicesSection(/*{  }: MyServicesSectionType*/) {
       <div className={`flex flex-col justify-center gap-11 max-w-screen-sm`}>
         <ServiceContainer
           number={`01`}
+          open={openedService === `consultation`}
+          setActive={setOpenedService}
           label={`consultation`}
           content={(
             <>
@@ -31,6 +38,8 @@ function MyServicesSection(/*{  }: MyServicesSectionType*/) {
         />
         <ServiceContainer
           number={`02`}
+          open={openedService === `photography`}
+          setActive={setOpenedService}
           label={`photography`}
           content={(
             <>
@@ -40,6 +49,8 @@ function MyServicesSection(/*{  }: MyServicesSectionType*/) {
         />
         <ServiceContainer
           number={`03`}
+          open={openedService === `videography`}
+          setActive={setOpenedService}
           label={`videography`}
           content={(
             <>
