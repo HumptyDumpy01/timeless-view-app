@@ -28,7 +28,7 @@ function ConsultationService(/*{  }: ConsultationServiceType*/) {
     setErrors(``);
     setFormStage(2);
 
-    scrollTo(`consultation-heading`);
+    scrollTo(`myServices`);
 
     /* TODO: USE RESEND PLATFORM TO SEND A MESSAGE TO MY CLIENT'S EMAIL */
 
