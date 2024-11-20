@@ -20,7 +20,7 @@ function PhotographyServiceContainer({ openedService, setOpenedService }: Photog
         <>
           <CustomModal content={(
             <>
-              <FillInForm mode={`photography`} />
+              <FillInForm onClose={setFormOpen} mode={`photography`} />
             </>
           )} open={formOpen} setOpen={setFormOpen} />
         </>

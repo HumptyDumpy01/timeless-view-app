@@ -8,13 +8,15 @@ const style = {
   top: '50%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
-  width: `90%`,
+  width: `80%`,
   height: `90%`,
   bgcolor: 'rgb(9, 9, 11)',
   border: '1px solid #fff',
   borderRadius: `16px`,
   boxShadow: 24,
-  p: 4
+  p: 4,
+  overflowY: `scroll`,
+  scrollbarWidth: `thin`
 };
 
 type CustomModalProps = {

@@ -11,7 +11,7 @@ function HeadingAndLabel({ heading, label }: HeadingAndLabelType) {
   return (
     <>
       <div className={`pb-6 border-b border-b-zinc-100`}>
-        <span className={`uppercase text-4xl inline-block mb-5`}>{heading}</span>
+        <span className={`uppercase text-4xl font-medium inline-block mb-5 text-zinc-400`}>{heading}</span>
         <Paragraph text={(
           label
         )} />
