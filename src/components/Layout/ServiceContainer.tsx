@@ -14,7 +14,8 @@ function ServiceContainer({ label, number, content }: ServiceContainerType) {
   return (
     <>
       <div>
-        <div className={`flex items-center justify-between`} onClick={() => setContentShown(prevState => !prevState)}>
+        <div className={`flex items-center justify-between cursor-pointer`}
+             onClick={() => setContentShown(prevState => !prevState)}>
           <ServiceLabel active={contentShown} label={label} number={number} />
           <div className={contentShown ? `-rotate-180` : ``}>
             <svg className={`w-[16] h-[8px] sm:w-[20px] sm:h-[12px]`} xmlns="http://www.w3.org/2000/svg" width="20"
@@ -28,7 +29,7 @@ function ServiceContainer({ label, number, content }: ServiceContainerType) {
         </div>
         {contentShown && (
           <>
-            <div className={`ml-4 mt-10`}>
+            <div className={`ml-4 mt-14`}>
               {content}
             </div>
           </>

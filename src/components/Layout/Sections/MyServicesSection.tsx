@@ -6,6 +6,8 @@ import Heading from '../../Typography/Heading.tsx';
 import HighlightLetter from '../../Typography/HighlightLetter.tsx';
 import ServiceContainer from '../ServiceContainer.tsx';
 import ConsultationService from '../Services/ConsultationService.tsx';
+import PhotographyService from '../Services/PhotographyService.tsx';
+import VideographyService from '../Services/VideographyService.tsx';
 
 function MyServicesSection(/*{  }: MyServicesSectionType*/) {
   return (
@@ -32,6 +34,7 @@ function MyServicesSection(/*{  }: MyServicesSectionType*/) {
           label={`photography`}
           content={(
             <>
+              <PhotographyService />
             </>
           )}
         />
@@ -40,6 +43,7 @@ function MyServicesSection(/*{  }: MyServicesSectionType*/) {
           label={`videography`}
           content={(
             <>
+              <VideographyService />
             </>
           )}
         />

@@ -3,6 +3,7 @@
 } */
 
 import Input from '../../UI/Input.tsx';
+import FormButton from '../../UI/FormButton.tsx';
 
 function ConsultationService(/*{  }: ConsultationServiceType*/) {
   return (
@@ -13,7 +14,7 @@ function ConsultationService(/*{  }: ConsultationServiceType*/) {
         <Input name={`phone`} label={`your phone`} placeholder={`Your Phone`} />
       </div>
       <div className={`mb-28`}>
-        <button className={`uppercase font-federo text-3xl border border-zinc-50 px-32 py-7`}>consult me</button>
+        <FormButton label={`consult me`} />
       </div>
     </form>
   );
