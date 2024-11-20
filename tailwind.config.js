@@ -10,6 +10,10 @@ export default {
         italiana: ['Italiana', 'serif'],
         raleway: ['Raleway', 'sans-serif'],
         lavishlyYours: ['Lavishly Yours', 'cursive']
+      },
+      screens: {
+        'bp-1042': '1042px',
+        'bp-828': '828px'
       }
     }
   },

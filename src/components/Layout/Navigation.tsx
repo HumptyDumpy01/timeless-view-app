@@ -13,15 +13,15 @@ export default function Navigation(/*{  }: NavigationType*/) {
       <header className={`items-center m-auto`}>
         <div className={`flex items-center justify-between`}>
           <div className={`flex items-center`}>
-            <h2 className={`font-italiana text-2xl mr-24`}>Timeless View</h2>
-            <div className={`flex items-center gap-7`}>
+            <h2 className={`font-italiana text-4xl mr-24 bp-828:text-2xl`}>Timeless View</h2>
+            <div className={`items-center gap-7 hidden bp-828:flex`}>
               <Link href={`#aboutMe`} label={`About me`} />
               <Link href={`#photoGallery`} label={`Photo Gallery`} />
               <Link href={`#videoGallery`} label={`Video Gallery`} />
               <Link href={`#myServices`} label={`My Services`} />
             </div>
           </div>
-          <div className={`flex items-center gap-7`}>
+          <div className={`items-center gap-7 hidden bp-1042:flex`}>
             <Link href={`
             tel:+1-234-567-8901`} label={`Contact me`} />
             <Link shouldOpenNewTab href={OLENAS_INSTAGRAM}

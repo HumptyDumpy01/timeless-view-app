@@ -12,12 +12,12 @@ import ArrowIcon from '../../UI/ArrowIcon.tsx';
 
 function Hero(/*{  }: HeroType*/) {
   return (
-    <section className={`relative max-w-screen-xl m-auto pt-12`}>
+    <section className={`relative max-w-screen-xl px-7 m-auto pt-12`}>
       <div className={`mb-[76px]`}>
         <Navigation />
       </div>
       <div className={`flex flex-col text-left`}>
-        <div className={`mb-14`}>
+        <div className={`mb-14 hidden bp-828:flex`}>
           <Heading heading={(
             <>
               Turning <HighlightLetter text={`L`} />ife’s
@@ -26,7 +26,7 @@ function Hero(/*{  }: HeroType*/) {
             </>
           )} />
         </div>
-        <div className={`mb-12`}>
+        <div className={`mb-12 hidden bp-1042:flex`}>
           <Paragraph text={(
             <>
               I am <HighlightText
@@ -39,12 +39,26 @@ function Hero(/*{  }: HeroType*/) {
           )} />
         </div>
 
-        <a href={OLENAS_INSTAGRAM} className={`text-2xl uppercase flex font-semibold items-center gap-4 py-5 px-14 
-            border border-zinc-50 w-fit`}>See my portfolio
+        <div className={`text-right bp-828:hidden mt-64 mb-14`}>
+          <span className={`uppercase text-sm mb-3 inline-block`}>professional photographer & videographer</span>
+          <Heading heading={(
+            <div className={`flex flex-col align-end`}>
+              <div className={`ml-auto`}>
+                <HighlightLetter text={`O`} /><span className={`uppercase inline-block`}>lena</span>
+              </div>
+              <div className={`ml-auto`}>
+                <HighlightLetter text={`V`} /><span className={`uppercase inline-block`}>inytska</span>
+              </div>
+            </div>
+          )} />
+        </div>
+
+        <a href={OLENAS_INSTAGRAM} className={`text-4xl bp-828:text-2xl uppercase flex font-semibold items-center gap-4 py-9 bp-828:py-5 px-14 
+            border border-zinc-50 bp-828:w-fit w-full justify-center`}>See my portfolio
           <ArrowIcon style={`large`} />
         </a>
       </div>
-      <div className={`absolute bottom-0 right-0 text-right`}>
+      <div className={`absolute text-right -bottom-48 bp-1042:bottom-0 right-0 hidden bp-828:block`}>
         <span className={`uppercase text-sm mb-3 inline-block`}>professional photographer & videographer</span>
         <Heading heading={(
           <div className={`flex flex-col align-end`}>
