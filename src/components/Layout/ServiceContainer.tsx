@@ -1,6 +1,7 @@
 import { ReactNode } from 'react';
 import ServiceLabel from '../UI/ServiceLabel.tsx';
 import { MyServicesSectionType } from './Sections/MyServicesSection.tsx';
+import scrollTo from '../../../utils/functions/scrollTo.ts';
 
 interface ServiceContainerType {
   label: MyServicesSectionType;
@@ -13,14 +14,19 @@ interface ServiceContainerType {
 
 function ServiceContainer({ label, number, content, open, setActive }: ServiceContainerType) {
   const chosenFillSvg = open ? `#fff` : `#757575`;
+
+  function handleSetOpen(label: MyServicesSectionType) {
+    if (!open) {
+      scrollTo(`myServices`);
+    }
+    return open ? setActive(false) : setActive(label);
+  }
+
   return (
     <>
-      <div id={`consultation-heading`}>
+      <div>
         <div className={`flex items-center justify-between cursor-pointer`}
-             onClick={open ?
-               () => setActive(false) :
-               () => setActive(label)
-             }>
+             onClick={() => handleSetOpen(label)}>
           <ServiceLabel active={open} label={label} number={number} />
           <div className={open ? `-rotate-180` : ``}>
             <svg className={`w-[16] h-[8px] sm:w-[20px] sm:h-[12px]`} xmlns="http://www.w3.org/2000/svg" width="20"

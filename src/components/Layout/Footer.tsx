@@ -21,7 +21,8 @@ export default function Footer(/*{  }: FooterType*/) {
           my instagram
         </a>
       </div>
-      <h2 className={`bp-828:text-[189px] sm:text-nowrap text-6xl m-auto uppercase font-italiana`}>timeless view</h2>
+      <h2 className={`bp-828:text-[189px] sm:text-nowrap text-6xl m-auto uppercase font-italiana text-center`}>timeless
+        view</h2>
       <div
         className={`flex items-center justify-between text-center sm:text-left text-zinc-700 mb-11 m-auto bp-828:mr-auto`}>
         <p className={`text-sm bp-828:text-normal mt-4 bp-828:mt-0`}>

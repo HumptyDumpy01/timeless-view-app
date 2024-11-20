@@ -48,21 +48,23 @@ function FillInForm({ mode, onClose }: FillInFormType) {
   };
 
   return (
-    <div className={`mt-11 px-5 relative`}>
+    <div className={`mt-11 sm:px-8 px-2 relative`}>
       <div onClick={() => onClose(false)} className={`absolute -top-7 right-0 cursor-pointer
       transition-all duration-200 hover:rotate-180 hover:scale-110`}>
-        <svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 125 125" fill="none">
+        <svg className={`w-20 lg:w-28 h-20 lg:h-28`} xmlns="http://www.w3.org/2000/svg" width="120" height="120"
+             viewBox="0 0 125 125"
+             fill="none">
           <path
             d="M62.5 7.8125C32.0312 7.8125 7.8125 32.0312 7.8125 62.5C7.8125 92.9688 32.0312 117.188 62.5 117.188C92.9688 117.188 117.188 92.9688 117.188 62.5C117.188 32.0312 92.9688 7.8125 62.5 7.8125ZM83.5938 89.8438L62.5 68.75L41.4062 89.8438L35.1562 83.5938L56.25 62.5L35.1562 41.4062L41.4062 35.1562L62.5 56.25L83.5938 35.1562L89.8438 41.4062L68.75 62.5L89.8438 83.5938L83.5938 89.8438Z"
             fill="#DFDFDF" />
         </svg>
       </div>
       <Heading heading={(
-        <div className={`font-raleway font-semibold text-7xl`}>
+        <div className={`font-raleway font-semibold sm:text-7xl text-5xl`}>
           Let’s fill in the form!
         </div>
       )} />
-      <form className={`grid grid-cols-2 mt-[60px] gap-10`}>
+      <form className={`flex flex-col bp-938:grid md:rid-cols-2 mt-[60px] gap-10`}>
         <div className={`flex flex-col gap-8`}>
           <Select
             label={`service chosen`}
@@ -102,11 +104,14 @@ function FillInForm({ mode, onClose }: FillInFormType) {
             hereafter,
             following a successful payment.</p>
 
-          <div className={`flex justify-between items-center mt-10 mb-4`}>
+          <div className={`flex lg:justify-between lg:items-center mt-10 mb-4 flex-col lg:flex-row gap-8 lg:gap-10`}>
             <button
-              className={`font-federo uppercase text-yellow-500 px-16 py-7 border border-amber-500 text-3xl flex w-fit items-center gap-4`}>
+              className={`font-federo uppercase justify-center text-yellow-500 px-16 py-7 border border-amber-500 sm:text-3xl text-xl text-nowrap flex lg:w-fit items-center gap-4
+              `}>
               Pay 100$ CAD Deposit
-              <ArrowIcon color={`yellow`} style={`large`} />
+              <div className={`hidden sm:flex`}>
+                <ArrowIcon color={`yellow`} style={`large`} />
+              </div>
             </button>
             <button
               onClick={() => onClose(false)}

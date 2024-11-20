@@ -16,7 +16,11 @@ const style = {
   boxShadow: 24,
   p: 4,
   overflowY: `scroll`,
-  scrollbarWidth: `thin`
+  scrollbarWidth: `thin`,
+  '@media (max-width: 37.5rem)': {
+    width: `100vw`,
+    height: `100vh`
+  }
 };
 
 type CustomModalProps = {
@@ -33,6 +37,11 @@ export default function CustomModal({ content, open, setOpen }: CustomModalProps
         onClose={() => setOpen(false)}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
+        slotProps={{
+          backdrop: {
+            sx: { backgroundColor: `rgba(0, 0, 0, 0.8)` }
+          }
+        }}
       >
         <Box sx={style}>
           {content}
