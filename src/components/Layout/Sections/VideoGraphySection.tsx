@@ -13,7 +13,7 @@ function VideoGraphySection(/*{  }: VideoGraphySectionType*/) {
   return (
     <>
       <section className={`mb-14`}>
-        <div className={`w-full max-w-screen-xl px-4 sm:px-9 m-auto flex flex-col gap-9`}>
+        <div className={`w-full max-w-screen-xl px-4 sm:px-9 m-auto flex flex-col gap-9`} id={`videoGallery`}>
           <Heading heading={(
             <div>
               <HighlightLetter text={`T`} />he <HighlightLetter text={`V`} />ideography <br />

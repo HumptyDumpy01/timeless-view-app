@@ -15,7 +15,7 @@ function ServiceContainer({ label, number, content, open, setActive }: ServiceCo
   const chosenFillSvg = open ? `#fff` : `#757575`;
   return (
     <>
-      <div>
+      <div id={`consultation-heading`}>
         <div className={`flex items-center justify-between cursor-pointer`}
              onClick={open ?
                () => setActive(false) :

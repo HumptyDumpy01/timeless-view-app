@@ -10,7 +10,7 @@ import HighlightText from '../Typography/HighlightText.tsx';
 function Photography(/*{  }: PhotographyType*/) {
   return (
     <>
-      <div className={`w-full max-w-screen-xl px-4 m-auto flex flex-col gap-9`}>
+      <div className={`w-full max-w-screen-xl px-4 m-auto flex flex-col gap-9`} id={`photoGallery`}>
         <div className={`hidden sm:flex justify-end`}>
           <Heading heading={(
             <div className={`flex bp-828:justify-end`}>

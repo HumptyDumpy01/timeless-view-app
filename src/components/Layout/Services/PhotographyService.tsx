@@ -43,10 +43,6 @@ function PhotographyService(/*{  }: PhotographyServiceType*/) {
           </>
         )} />
       </div>
-      <div className={`mb-28`}>
-        <FormButton label={`book now!`} />
-      </div>
-
     </div>
   );
 }

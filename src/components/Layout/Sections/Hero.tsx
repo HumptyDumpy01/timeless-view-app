@@ -16,7 +16,7 @@ function Hero(/*{  }: HeroType*/) {
       <div className={`mb-[76px]`}>
         <Navigation />
       </div>
-      <div className={`flex flex-col text-left`}>
+      <div className={`flex flex-col text-left`} id={`aboutMe`}>
         <div className={`mb-14 hidden bp-828:flex`}>
           <Heading heading={(
             <>

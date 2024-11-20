@@ -4,7 +4,6 @@
 
 import HighlightText from '../../Typography/HighlightText.tsx';
 import HeadingAndLabel from '../../UI/HeadingAndLabel.tsx';
-import FormButton from '../../UI/FormButton.tsx';
 
 function VideographyService(/*{  }: VideographyServiceType*/) {
   return (
@@ -42,10 +41,6 @@ function VideographyService(/*{  }: VideographyServiceType*/) {
           </>
         )} />
       </div>
-      <div className={`mb-28`}>
-        <FormButton label={`book now!`} />
-      </div>
-
     </div>
   );
 }
