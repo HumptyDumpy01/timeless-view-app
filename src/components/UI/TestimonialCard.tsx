@@ -12,10 +12,10 @@ import Paragraph from '../Typography/Paragraph.tsx';
 function TestimonialCard({ title, quote, imgSrc, date, initials }: TestimonialCardType) {
   return (
     <>
-      <div className={`max-w-screen-sm min-w-[530px]`}>
+      <div className={`max-w-screen-sm sm:min-w-[530px] px-3 sm:px-0`}>
         <h2 className={`text-5xl font-italiana uppercase mb-8`}>{title}</h2>
         <div className={`mb-9`}>
-          <Paragraph text={(
+          <Paragraph customClasses={`max-w-screen-sm text-zinc-300`} text={(
             <>
               "{quote}"
             </>
