@@ -5,6 +5,7 @@
 import Heading from '../../Typography/Heading.tsx';
 import HighlightLetter from '../../Typography/HighlightLetter.tsx';
 import ServiceContainer from '../ServiceContainer.tsx';
+import ConsultationService from '../Services/ConsultationService.tsx';
 
 function MyServicesSection(/*{  }: MyServicesSectionType*/) {
   return (
@@ -17,9 +18,31 @@ function MyServicesSection(/*{  }: MyServicesSectionType*/) {
         )} />
       </div>
       <div className={`flex flex-col justify-center gap-11 max-w-screen-sm`}>
-        <ServiceContainer number={`01`} label={`consultation`} />
-        <ServiceContainer number={`02`} label={`photography`} />
-        <ServiceContainer number={`03`} label={`videography`} />
+        <ServiceContainer
+          number={`01`}
+          label={`consultation`}
+          content={(
+            <>
+              <ConsultationService />
+            </>
+          )}
+        />
+        <ServiceContainer
+          number={`02`}
+          label={`photography`}
+          content={(
+            <>
+            </>
+          )}
+        />
+        <ServiceContainer
+          number={`03`}
+          label={`videography`}
+          content={(
+            <>
+            </>
+          )}
+        />
       </div>
     </section>
   );

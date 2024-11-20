@@ -1,18 +1,21 @@
+import { ReactNode, useState } from 'react';
+import ServiceLabel from '../UI/ServiceLabel.tsx';
+
 interface ServiceContainerType {
   label: string;
   number: string;
+  content: ReactNode;
   // children: ReactNode;
 }
 
-import ServiceLabel from '../UI/ServiceLabel.tsx';
-
-function ServiceContainer({ label, number }: ServiceContainerType) {
+function ServiceContainer({ label, number, content }: ServiceContainerType) {
+  const [contentShown, setContentShown] = useState<boolean>(false);
   return (
     <>
       <div>
-        <div className={`flex items-center justify-between`}>
+        <div className={`flex items-center justify-between`} onClick={() => setContentShown(prevState => !prevState)}>
           <ServiceLabel label={label} number={number} />
-          <div>
+          <div className={contentShown ? `-rotate-180` : ``}>
             <svg className={`w-[16] h-[8px] sm:w-[20px] sm:h-[12px]`} xmlns="http://www.w3.org/2000/svg" width="20"
                  height="12"
                  viewBox="0 0 20 12" fill="none">
@@ -22,6 +25,13 @@ function ServiceContainer({ label, number }: ServiceContainerType) {
             </svg>
           </div>
         </div>
+        {contentShown && (
+          <>
+            <div>
+              {content}
+            </div>
+          </>
+        )}
       </div>
     </>
   );

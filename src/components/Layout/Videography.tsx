@@ -2,8 +2,8 @@
 
 function Videography(/*{  }: VideographyType*/) {
   return (
-    <div className={`flex overflow-x-auto scrollbar-hide gap-8 items-center overflow-y-hidden`}>
-      <div>
+    <div className={`flex overflow-x-auto scrollbar-hide gap-8 items-center py-7`}>
+      <div className={`flex`}>
         <iframe
           width="400"
           height="620"
@@ -16,7 +16,8 @@ function Videography(/*{  }: VideographyType*/) {
         ></iframe>
       </div>
 
-      <div>
+
+      <div className={`flex`}>
         <iframe
           width="400"
           height="620"
@@ -29,7 +30,8 @@ function Videography(/*{  }: VideographyType*/) {
         ></iframe>
       </div>
 
-      <div>
+
+      <div className={`flex`}>
         <iframe
           width="400"
           height="620"
@@ -43,7 +45,8 @@ function Videography(/*{  }: VideographyType*/) {
         ></iframe>
       </div>
 
-      <div>
+
+      <div className={`flex`}>
         <iframe
           width="400"
           height="620"
