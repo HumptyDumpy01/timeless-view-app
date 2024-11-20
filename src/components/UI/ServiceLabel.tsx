@@ -1,15 +1,19 @@
 interface ServiceLabelType {
   number: string;
   label: string;
+  active?: boolean;
   // children: ReactNode;
 }
 
-function ServiceLabel({ number, label }: ServiceLabelType) {
+function ServiceLabel({ number, label, active = false }: ServiceLabelType) {
+  const inactiveStyles = `text-zinc-500`;
+  const activeStyles = `text-zinc-100`;
+  const textColor = active ? activeStyles : inactiveStyles;
   return (
     <>
       <div className={`flex items-end gap-5 cursor-pointer`}>
-        <span className={`font-lavishlyYours md:text-6xl text-4xl text-zinc-500`}>{number}</span>
-        <h3 className={`font-italiana text-4xl md:text-6xl uppercase text-zinc-500`}>{label}</h3>
+        <span className={`font-lavishlyYours md:text-6xl text-4xl ${textColor}`}>{number}</span>
+        <h3 className={`font-italiana text-4xl md:text-6xl uppercase ${textColor}`}>{label}</h3>
       </div>
     </>
   );

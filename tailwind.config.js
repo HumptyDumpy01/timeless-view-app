@@ -9,7 +9,8 @@ export default {
       fontFamily: {
         italiana: ['Italiana', 'serif'],
         raleway: ['Raleway', 'sans-serif'],
-        lavishlyYours: ['Lavishly Yours', 'cursive']
+        lavishlyYours: ['Lavishly Yours', 'cursive'],
+        federo: ['Federo', 'cursive']
       },
       screens: {
         'bp-1042': '1042px',
