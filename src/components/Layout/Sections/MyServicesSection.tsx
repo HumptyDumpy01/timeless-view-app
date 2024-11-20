@@ -8,7 +8,7 @@ import ServiceContainer from '../ServiceContainer.tsx';
 
 function MyServicesSection(/*{  }: MyServicesSectionType*/) {
   return (
-    <section className={`w-full max-w-screen-xl m-auto flex flex-col gap-9 mb-36`}>
+    <section className={`w-full max-w-screen-xl px-4 bp-828:px-9 m-auto flex flex-col gap-9 mb-36`}>
       <div className={`uppercase mb-20`}>
         <Heading heading={(
           <>

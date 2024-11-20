@@ -10,7 +10,7 @@ import HighlightText from '../Typography/HighlightText.tsx';
 function Testimonials(/*{  }: TestimonialsType*/) {
   return (
     <section>
-      <div className={`w-full max-w-screen-xl m-auto flex flex-col gap-9`}>
+      <div className={`w-full max-w-screen-xl m-auto px-4 sm:px-9 flex flex-col gap-9`}>
         <div className={`ml-auto`}>
           <Heading heading={(
             <div className={`flex justify-end flex-col`}>

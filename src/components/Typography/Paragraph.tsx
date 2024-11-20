@@ -8,7 +8,7 @@ interface ParagraphType {
 
 function Paragraph({ text, customClasses = `max-w-screen-sm` }: ParagraphType) {
   return (
-    <p className={`${customClasses} leading-relaxed`}>{text}</p>
+    <p className={`${customClasses} leading-relaxed sm:text-sm`}>{text}</p>
   );
 }
 

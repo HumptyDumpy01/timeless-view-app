@@ -12,7 +12,7 @@ import ArrowIcon from '../../UI/ArrowIcon.tsx';
 
 function Hero(/*{  }: HeroType*/) {
   return (
-    <section className={`relative max-w-screen-xl px-7 m-auto pt-12`}>
+    <section className={`relative max-w-screen-xl px-4 sm:px-9 m-auto pt-7 sm:pt-12`}>
       <div className={`mb-[76px]`}>
         <Navigation />
       </div>
@@ -26,6 +26,7 @@ function Hero(/*{  }: HeroType*/) {
             </>
           )} />
         </div>
+
         <div className={`mb-12 hidden bp-1042:flex`}>
           <Paragraph text={(
             <>
@@ -53,9 +54,11 @@ function Hero(/*{  }: HeroType*/) {
           )} />
         </div>
 
-        <a href={OLENAS_INSTAGRAM} className={`text-4xl bp-828:text-2xl uppercase flex font-semibold items-center gap-4 py-9 bp-828:py-5 px-14 
-            border border-zinc-50 bp-828:w-fit w-full justify-center`}>See my portfolio
-          <ArrowIcon style={`large`} />
+        <a href={OLENAS_INSTAGRAM} className={`sm:text-4xl text-xl bp-828:text-2xl uppercase flex font-semibold items-center gap-4 py-9 bp-828:py-5 px-14 
+            border border-zinc-50 bp-828:w-fit w-full justify-center text-nowrap`}>See my portfolio
+          <div className={`hidden sm:flex`}>
+            <ArrowIcon style={`large`} />
+          </div>
         </a>
       </div>
       <div className={`absolute text-right -bottom-48 bp-1042:bottom-0 right-0 hidden bp-828:block`}>
