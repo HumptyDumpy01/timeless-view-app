@@ -2,6 +2,9 @@ import { MyServicesSectionType } from '../Sections/MyServicesSection.tsx';
 import ServiceContainer from '../ServiceContainer.tsx';
 import PhotographyService from './PhotographyService.tsx';
 import FormButton from '../../UI/FormButton.tsx';
+import { useState } from 'react';
+import CustomModal from '../../UI/CustomModal.tsx';
+import FillInForm from '../../UI/FillInForm.tsx';
 
 interface PhotographyServiceContainerType {
   openedService: MyServicesSectionType | false;
@@ -10,8 +13,18 @@ interface PhotographyServiceContainerType {
 }
 
 function PhotographyServiceContainer({ openedService, setOpenedService }: PhotographyServiceContainerType) {
+  const [formOpen, setFormOpen] = useState<boolean>(false);
   return (
     <>
+      {formOpen && (
+        <>
+          <CustomModal content={(
+            <>
+              <FillInForm mode={`photography`} />
+            </>
+          )} open={formOpen} setOpen={setFormOpen} />
+        </>
+      )}
       <ServiceContainer
         number={`02`}
         open={openedService === `photography`}
@@ -21,7 +34,7 @@ function PhotographyServiceContainer({ openedService, setOpenedService }: Photog
           <>
             <PhotographyService />
             <div className={`mt-20 mb-7`}>
-              <FormButton label={`book now!`} />
+              <FormButton onClick={() => setFormOpen(true)} label={`book now!`} />
             </div>
 
           </>
