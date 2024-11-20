@@ -4,12 +4,14 @@ import Input from './Input.tsx';
 import HighlightText from '../Typography/HighlightText.tsx';
 import ArrowIcon from './ArrowIcon.tsx';
 import {
+  photographyAndVideographyPackages,
   photographyOptions,
   photographyPackageOptions,
   videographyOptions,
   videographyPackageOptions
 } from '../../../utils/variables.ts';
 import { Tooltip } from '@mui/material';
+import { ChangeEvent, useState } from 'react';
 
 interface FillInFormType {
   mode: `photography` | `videography` | `success` | `error`;
@@ -18,8 +20,32 @@ interface FillInFormType {
 }
 
 function FillInForm({ mode, onClose }: FillInFormType) {
-  const chosenSelectionOptionsService = mode === `photography` ? photographyOptions : videographyOptions;
-  const chosenSelectionOptionsPackage = mode === `photography` ? photographyPackageOptions : videographyPackageOptions;
+  const [chosenSelectionOptionsService, setChosenSelectionOptionsService] =
+    useState(mode === `photography` ? photographyOptions : videographyOptions);
+  const [chosenSelectionOptionsPackage, setChosenSelectionOptionsPackage] =
+    useState(mode === `photography` ? photographyPackageOptions : videographyPackageOptions);
+
+  // @ts-ignore
+  const [selectedService, setSelectedService] = useState<string>('');
+
+  const handleServiceChange = (event: ChangeEvent<HTMLSelectElement>) => {
+    setSelectedService(event.target.value);
+
+    switch (event.target.value) {
+      case `photography`:
+        setChosenSelectionOptionsService(photographyOptions);
+        setChosenSelectionOptionsPackage(photographyPackageOptions);
+        break;
+      case `videography`:
+        setChosenSelectionOptionsService(videographyOptions);
+        setChosenSelectionOptionsPackage(videographyPackageOptions);
+        break;
+      case `both`:
+        setChosenSelectionOptionsService(photographyOptions);
+        setChosenSelectionOptionsPackage(photographyAndVideographyPackages);
+        break;
+    }
+  };
 
   return (
     <div className={`mt-11 px-5 relative`}>
@@ -38,8 +64,12 @@ function FillInForm({ mode, onClose }: FillInFormType) {
       )} />
       <form className={`grid grid-cols-2 mt-[60px] gap-10`}>
         <div className={`flex flex-col gap-8`}>
-          <Select label={`service chosen`} name={`serviceChosen`}
-                  options={chosenSelectionOptionsService} />
+          <Select
+            label={`service chosen`}
+            name={`serviceChosen`}
+            options={chosenSelectionOptionsService}
+            onChange={handleServiceChange}
+          />
 
           <Input label={`your name`} name={`name`} placeholder={`e.g. Jane Doe`} />
           <Input label={`your email`} name={`email`} placeholder={`e.g. jane.doe@gmil.com`} />
@@ -62,7 +92,7 @@ function FillInForm({ mode, onClose }: FillInFormType) {
                   options={chosenSelectionOptionsPackage} />
         </div>
         <div className={`text-left col-span-2`}>
-          <p className={`text-[13px] text-zinc-300 max-w-screen-lg leading-relaxed`}>After paying the deposit, check
+          <p className={`text-sm text-zinc-300 max-w-screen-lg leading-relaxed`}>After paying the deposit, check
             your
             email for a confirmation letter. You also
             need
@@ -111,7 +141,6 @@ function FillInForm({ mode, onClose }: FillInFormType) {
               </p>
             </Tooltip>
           </div>
-
         </div>
       </form>
     </div>

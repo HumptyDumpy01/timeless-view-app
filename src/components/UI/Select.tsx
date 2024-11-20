@@ -3,14 +3,22 @@ interface SelectType {
   name: string;
   options: { value: string; label: string }[];
   label: string;
+  onChange?: (event: React.ChangeEvent<HTMLSelectElement>) => void;
   // children: ReactNode;
 }
 
-function Select({ required = true, name, options, label }: SelectType) {
+function Select({
+                  required = true,
+                  name,
+                  options,
+                  label,
+                  onChange
+                }: SelectType) {
   return (
     <>
       <div className="group flex flex-col gap-3">
         <select
+          onChange={onChange}
           required={required}
           name={name}
           id={name}

@@ -31,3 +31,10 @@ export const videographyPackageOptions = [
   { value: `none`, label: `NONE` },
   { value: `videoShoot`, label: `Video Shoot` }
 ];
+
+export const photographyAndVideographyPackages = [
+  { value: `none`, label: `NONE` },
+  { value: `photoSession`, label: `Photo Session` },
+  { value: `videoShoot`, label: `Video Shoot` },
+  { value: `both`, label: `Both` }
+];
