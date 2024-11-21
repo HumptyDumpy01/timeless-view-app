@@ -25,7 +25,7 @@ function PhotographySection(/*{  }: PhotographySectionType*/) {
       viewport={{ once: true }}
       className={`mb-20 pt-4`}>
       <Photography />
-      <div className={`hidden sm:flex`}>
+      <div className={`hidden sm:block`}>
         <Slider {...sliderSettings}
                 className={`overflow-x-auto scrollbar-hide overflow-y-hidden cursor-grabbing gap-4 sm:gap-7`}>
           {photos.map((photo, index) => (
