@@ -59,7 +59,7 @@ function FillInForm({ mode, onClose }: FillInFormType) {
             fill="#DFDFDF" />
         </svg>
       </div>
-      <Heading heading={(
+      <Heading animation={false} heading={(
         <div className={`font-raleway font-semibold sm:text-7xl text-5xl`}>
           Let’s fill in the form!
         </div>

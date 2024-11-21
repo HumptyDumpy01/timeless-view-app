@@ -9,6 +9,7 @@ import ConsultationService from '../Services/ConsultationService.tsx';
 import { useState } from 'react';
 import PhotographyServiceContainer from '../Services/PhotographyServiceContainer.tsx';
 import VideographyServiceContainer from '../Services/VideographyServiceContainer.tsx';
+import { motion } from 'framer-motion';
 
 
 export type MyServicesSectionType = `consultation` | `photography` | `videography`;
@@ -16,7 +17,12 @@ export type MyServicesSectionType = `consultation` | `photography` | `videograph
 function MyServicesSection(/*{  }: MyServicesSectionType*/) {
   const [openedService, setOpenedService] = useState<MyServicesSectionType | false>(false);
   return (
-    <section className={`w-full max-w-screen-xl px-4 bp-828:px-9 m-auto flex flex-col gap-9 mb-36`}>
+    <motion.section
+      initial={{ opacity: 0, y: 100 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1 }}
+      viewport={{ once: true }}
+      className={`w-full max-w-screen-xl px-4 bp-828:px-9 m-auto flex flex-col gap-9 mb-36`}>
       <div className={`uppercase sm:mb-20 mb-4`} id={`myServices`}>
         <Heading heading={(
           <>
@@ -39,7 +45,7 @@ function MyServicesSection(/*{  }: MyServicesSectionType*/) {
         <PhotographyServiceContainer openedService={openedService} setOpenedService={setOpenedService} />
         <VideographyServiceContainer openedService={openedService} setOpenedService={setOpenedService} />
       </div>
-    </section>
+    </motion.section>
   );
 }
 

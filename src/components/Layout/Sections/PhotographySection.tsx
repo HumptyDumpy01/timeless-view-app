@@ -25,12 +25,22 @@ function PhotographySection(/*{  }: PhotographySectionType*/) {
       viewport={{ once: true }}
       className={`mb-20 pt-4`}>
       <Photography />
-      <Slider {...sliderSettings}
-              className={`overflow-x-auto scrollbar-hide overflow-y-hidden cursor-grabbing gap-4 sm:gap-7`}>
-        {photos.map((photo, index) => (
-          <AnimatedImage key={index} src={photo} alt={`Image ${index + 1}`} />
-        ))}
-      </Slider>
+      <div className={`hidden sm:flex`}>
+        <Slider {...sliderSettings}
+                className={`overflow-x-auto scrollbar-hide overflow-y-hidden cursor-grabbing gap-4 sm:gap-7`}>
+          {photos.map((photo, index) => (
+            <AnimatedImage key={index} src={photo} alt={`Image ${index + 1}`} />
+          ))}
+        </Slider>
+      </div>
+      <div className={`flex items-center overflow-x-auto scrollbar-hide gap-4 sm:hidden`}>
+        <img src={Photo1} alt={`Photo 1`} className={`w-full`} />
+        <img src={Photo2} alt={`Photo 2`} className={`w-full`} />
+        <img src={Photo3} alt={`Photo 3`} className={`w-full`} />
+        <img src={Photo4} alt={`Photo 4`} className={`w-full`} />
+        <img src={Photo5} alt={`Photo 5`} className={`w-full`} />
+        <img src={Photo6} alt={`Photo 6`} className={`w-full`} />
+      </div>
       {/*<Tooltip label={`Scroll to the right to see more`} />*/}
     </motion.section>
   );

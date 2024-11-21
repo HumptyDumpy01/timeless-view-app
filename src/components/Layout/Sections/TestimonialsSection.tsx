@@ -8,43 +8,70 @@ import UserImg1 from '../../../assets/testimonials/user-icon-1.png';
 import UserImg2 from '../../../assets/testimonials/user-icon-2.png';
 import { useState } from 'react';
 import ArrowIcon from '../../UI/ArrowIcon.tsx';
+import { sliderSettings } from '../../../../utils/variables.ts';
+import Slider from 'react-slick';
+import { motion } from 'framer-motion';
 
 function TestimonialsSection(/*{  }: TestimonialsSectionType*/) {
   const [paginateComments, setPaginateComments] = useState<boolean>(true);
+  const settings = {
+    ...sliderSettings,
+    pauseOnHover: true,
+    slidesToShow: 2
+  };
+
   return (
-    <section className={`mb-24`}>
+    <motion.section
+      initial={{ opacity: 0, y: 100 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1 }}
+      viewport={{ once: true }}
+      className={`mb-24`}>
       <Testimonials />
+
       <div className={`overflow-x-auto scrollbar-hide ml-4 hidden sm:flex`}>
-        <TestimonialCard
-          date={`August 14, 2024`}
-          title={`very good!`}
-          initials={`Jane Doe`}
-          imgSrc={UserImg1}
-          quote={`Working with Olena was an absolute dream! She has an incredible talent for making everyone feel comfortable, capturing authentic, beautiful moments that we’ll cherish forever!`} />
-        <TestimonialCard
-          date={`August 14, 2024`}
-          title={`very good!`}
-          initials={`Jane Doe`}
-          imgSrc={UserImg2}
-          quote={`Working with Olena was an absolute dream! She has an incredible talent for making everyone feel comfortable, capturing authentic, beautiful moments that we’ll cherish forever!`} />
-        <TestimonialCard
-          date={`August 14, 2024`}
-          title={`very good!`}
-          initials={`Jane Doe`}
-          imgSrc={UserImg2}
-          quote={`Working with Olena was an absolute dream! She has an incredible talent for making everyone feel comfortable, capturing authentic, beautiful moments that we’ll cherish forever!`} />
-        <TestimonialCard
-          date={`August 14, 2024`}
-          title={`very good!`}
-          initials={`Jane Doe`}
-          imgSrc={UserImg1}
-          quote={`Working with Olena was an absolute dream! She has an incredible talent for making everyone feel comfortable, capturing authentic, beautiful moments that we’ll cherish forever!`} />
-        <TestimonialCard
-          date={`August 14, 2024`}
-          title={`very good!`}
-          initials={`Jane Doe`}
-          imgSrc={UserImg2}
-          quote={`Working with Olena was an absolute dream! She has an incredible talent for making everyone feel comfortable, capturing authentic, beautiful moments that we’ll cherish forever!`} />
+        <Slider {...settings} className={`overflow-x-auto scrollbar-hide ml-4 hidden sm:flex`}>
+          <div>
+            <TestimonialCard
+              date={`August 14, 2024`}
+              title={`very good!`}
+              initials={`Jane Doe`}
+              imgSrc={UserImg1}
+              quote={`Working with Olena was an absolute dream! She has an incredible talent for making everyone feel comfortable, capturing authentic, beautiful moments that we’ll cherish forever!`} />
+          </div>
+          <div>
+            <TestimonialCard
+              date={`August 14, 2024`}
+              title={`very good!`}
+              initials={`Jane Doe`}
+              imgSrc={UserImg2}
+              quote={`Working with Olena was an absolute dream! She has an incredible talent for making everyone feel comfortable, capturing authentic, beautiful moments that we’ll cherish forever!`} />
+          </div>
+          <div>
+            <TestimonialCard
+              date={`August 14, 2024`}
+              title={`very good!`}
+              initials={`Jane Doe`}
+              imgSrc={UserImg2}
+              quote={`Working with Olena was an absolute dream! She has an incredible talent for making everyone feel comfortable, capturing authentic, beautiful moments that we’ll cherish forever!`} />
+          </div>
+          <div>
+            <TestimonialCard
+              date={`August 14, 2024`}
+              title={`very good!`}
+              initials={`Jane Doe`}
+              imgSrc={UserImg1}
+              quote={`Working with Olena was an absolute dream! She has an incredible talent for making everyone feel comfortable, capturing authentic, beautiful moments that we’ll cherish forever!`} />
+          </div>
+          <div>
+            <TestimonialCard
+              date={`August 14, 2024`}
+              title={`very good!`}
+              initials={`Jane Doe`}
+              imgSrc={UserImg2}
+              quote={`Working with Olena was an absolute dream! She has an incredible talent for making everyone feel comfortable, capturing authentic, beautiful moments that we’ll cherish forever!`} />
+          </div>
+        </Slider>
       </div>
 
       <div className={`flex flex-col gap-12 sm:hidden`}>
@@ -100,7 +127,7 @@ function TestimonialsSection(/*{  }: TestimonialsSectionType*/) {
           </div>
         </button>
       </div>
-    </section>
+    </motion.section>
   );
 }
 
