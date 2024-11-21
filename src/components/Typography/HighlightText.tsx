@@ -1,11 +1,12 @@
 interface HighlightTextTextType {
   text: string;
-  highlightColor?: `white` | `yellow`;
+  highlightColor?: `white` | `yellow` | `red`;
   // children: ReactNode;
 }
 
 function HighlightText({ text, highlightColor = `white` }: HighlightTextTextType) {
-  const colorStyles = highlightColor === `white` ? `text-white` : `text-yellow-500`;
+  const colorStyles = highlightColor === `white` ? `text-white` :
+    highlightColor === `yellow` ? `text-yellow-400` : `text-red-600`;
   return (
     <>
       <span className={`font-semibold ${colorStyles}`}>{text}</span>
