@@ -6,14 +6,21 @@
 
 import Link from '../UI/Link.tsx';
 import { OLENAS_INSTAGRAM } from '../../../utils/variables.ts';
+import { motion } from 'framer-motion';
 
 export default function Navigation(/*{  }: NavigationType*/) {
   return (
     <>
       <header className={`items-center m-auto`}>
         <div className={`flex items-center justify-between`}>
-          <div className={`flex items-center`}>
-            <h2 className={`font-italiana text-3xl mr-24 bp-828:text-2xl text-nowrap`}>Timeless View</h2>
+          <div className={`flex items-center textyello`}>
+            <motion.h2
+              onClick={() => window.location.reload()}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              className={`font-italiana text-3xl mr-24 bp-828:text-2xl text-nowrap 
+            cursor-pointer`}>Timeless View
+            </motion.h2>
             <div className={`items-center gap-7 hidden bp-828:flex`}>
               <Link href={`#aboutMe`} label={`About me`} />
               <Link href={`#photoGallery`} label={`Photo Gallery`} />

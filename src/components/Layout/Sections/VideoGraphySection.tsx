@@ -8,12 +8,23 @@ import Paragraph from '../../Typography/Paragraph.tsx';
 import HighlightText from '../../Typography/HighlightText.tsx';
 import Videography from '../Videography.tsx';
 import Tooltip from '../Tooltip.tsx';
+import { motion } from 'framer-motion';
 
 function VideoGraphySection(/*{  }: VideoGraphySectionType*/) {
   return (
     <>
-      <section className={`mb-14`}>
-        <div className={`w-full max-w-screen-xl px-4 sm:px-9 m-auto flex flex-col gap-9`} id={`videoGallery`}>
+      <motion.section
+        initial={{ opacity: 0, y: 100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        viewport={{ once: true }}
+        className={`mb-14`}>
+        <motion.div
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+          viewport={{ once: true }}
+          className={`w-full max-w-screen-xl px-4 sm:px-9 m-auto flex flex-col gap-9`} id={`videoGallery`}>
           <Heading heading={(
             <div>
               <HighlightLetter text={`T`} />he <HighlightLetter text={`V`} />ideography <br />
@@ -28,10 +39,10 @@ function VideoGraphySection(/*{  }: VideoGraphySectionType*/) {
                 engage, and leave a lasting impact.`} highlightColor={`yellow`} /></>
             )} />
           </div>
-        </div>
+        </motion.div>
         <Videography />
         <Tooltip label={`Scroll to the right to see more`} />
-      </section>
+      </motion.section>
     </>
   );
 }

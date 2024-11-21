@@ -38,3 +38,16 @@ export const photographyAndVideographyPackages = [
   { value: `videoShoot`, label: `Video Shoot` },
   { value: `both`, label: `Both` }
 ];
+
+
+export const sliderSettings = {
+  infinite: true,
+  speed: 2500,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 900,
+  pauseOnHover: false
+};
+
+
