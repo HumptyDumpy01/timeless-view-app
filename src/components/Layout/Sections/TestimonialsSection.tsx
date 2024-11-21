@@ -29,7 +29,7 @@ function TestimonialsSection(/*{  }: TestimonialsSectionType*/) {
       className={`mb-24`}>
       <Testimonials />
 
-      <div className={`overflow-x-auto scrollbar-hide ml-4 hidden sm:flex`}>
+      <div className={`overflow-x-auto scrollbar-hide ml-4 hidden sm:block`}>
         <Slider {...settings} className={`overflow-x-auto scrollbar-hide ml-4 hidden sm:flex`}>
           <div>
             <TestimonialCard
