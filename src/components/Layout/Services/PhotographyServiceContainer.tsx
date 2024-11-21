@@ -3,8 +3,8 @@ import ServiceContainer from '../ServiceContainer.tsx';
 import PhotographyService from './PhotographyService.tsx';
 import FormButton from '../../UI/FormButton.tsx';
 import { useState } from 'react';
-import CustomModal from '../../UI/CustomModal.tsx';
-import FillInForm from '../../UI/FillInForm.tsx';
+import CustomModal from '../../UI/Modal/CustomModal.tsx';
+import SuccessModal from '../../UI/Modal/SuccessModal.tsx';
 
 interface PhotographyServiceContainerType {
   openedService: MyServicesSectionType | false;
@@ -20,7 +20,9 @@ function PhotographyServiceContainer({ openedService, setOpenedService }: Photog
         <>
           <CustomModal content={(
             <>
-              <FillInForm onClose={setFormOpen} mode={`photography`} />
+              {/*<FillInForm onClose={setFormOpen} mode={`photography`} />*/}
+              <SuccessModal onClose={setFormOpen} />
+
             </>
           )} open={formOpen} setOpen={setFormOpen} />
         </>

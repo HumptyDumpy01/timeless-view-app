@@ -1,15 +1,15 @@
-import Heading from '../Typography/Heading.tsx';
-import Select from './Select.tsx';
-import Input from './Input.tsx';
-import HighlightText from '../Typography/HighlightText.tsx';
-import ArrowIcon from './ArrowIcon.tsx';
+import Heading from '../../Typography/Heading.tsx';
+import Select from '../Select.tsx';
+import Input from '../Input.tsx';
+import HighlightText from '../../Typography/HighlightText.tsx';
+import ArrowIcon from '../ArrowIcon.tsx';
 import {
   photographyAndVideographyPackages,
   photographyOptions,
   photographyPackageOptions,
   videographyOptions,
   videographyPackageOptions
-} from '../../../utils/variables.ts';
+} from '../../../../utils/variables.ts';
 import { Tooltip } from '@mui/material';
 import { ChangeEvent, useState } from 'react';
 

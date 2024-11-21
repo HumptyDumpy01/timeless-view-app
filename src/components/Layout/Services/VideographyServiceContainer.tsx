@@ -3,8 +3,8 @@ import ServiceContainer from '../ServiceContainer.tsx';
 import VideographyService from './VideographyService.tsx';
 import FormButton from '../../UI/FormButton.tsx';
 import { useState } from 'react';
-import CustomModal from '../../UI/CustomModal.tsx';
-import FillInForm from '../../UI/FillInForm.tsx';
+import CustomModal from '../../UI/Modal/CustomModal.tsx';
+import FillInForm from '../../UI/Form/FillInForm.tsx';
 
 interface VideographyServiceContainerType {
   openedService: MyServicesSectionType | false;
