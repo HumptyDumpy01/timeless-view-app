@@ -6,8 +6,8 @@ interface ServiceLabelType {
 }
 
 function ServiceLabel({ number, label, active = false }: ServiceLabelType) {
-  const inactiveStyles = `text-zinc-500`;
-  const activeStyles = `text-zinc-100`;
+  const inactiveStyles = `text-zinc-500 transition-all duration-300`;
+  const activeStyles = `text-zinc-100 transition-all duration-300`;
   const textColor = active ? activeStyles : inactiveStyles;
   return (
     <>
