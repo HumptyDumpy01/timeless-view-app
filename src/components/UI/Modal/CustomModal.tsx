@@ -19,7 +19,10 @@ const style = {
   scrollbarWidth: `thin`,
   '@media (max-width: 37.5rem)': {
     width: `100vw`,
-    height: `100vh`
+    height: `100vh`,
+    borderRadius: `0`,
+    border: `none`,
+    p: `1rem`
   }
 };
 

@@ -45,6 +45,7 @@ function ServiceContainer({ label, number, content, open, setActive }: ServiceCo
               <motion.div
                 initial={{ opacity: 0, y: 100 }}
                 animate={{ opacity: 1, y: 0 }}
+                // exit={{ opacity: 0, y: 100 }}
                 className={`ml-4 mt-14`}>
                 {content}
               </motion.div>
