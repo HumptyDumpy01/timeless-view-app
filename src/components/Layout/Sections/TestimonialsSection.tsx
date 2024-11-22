@@ -1,23 +1,33 @@
-/* interface TestimonialsSectionType {
-  // children: ReactNode;
-} */
-
+import { useEffect, useState } from 'react';
 import Testimonials from '../Testimonials.tsx';
 import TestimonialCard from '../../UI/TestimonialCard.tsx';
 import UserImg1 from '../../../assets/testimonials/user-icon-1.png';
 import UserImg2 from '../../../assets/testimonials/user-icon-2.png';
-import { useState } from 'react';
 import ArrowIcon from '../../UI/ArrowIcon.tsx';
 import { sliderSettings } from '../../../../utils/variables.ts';
 import Slider from 'react-slick';
 import { motion } from 'framer-motion';
 
-function TestimonialsSection(/*{  }: TestimonialsSectionType*/) {
+function useWindowWidth() {
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => setWindowWidth(window.innerWidth);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  return windowWidth;
+}
+
+function TestimonialsSection() {
   const [paginateComments, setPaginateComments] = useState<boolean>(true);
+  const windowWidth = useWindowWidth();
+
   const settings = {
     ...sliderSettings,
     pauseOnHover: true,
-    slidesToShow: 2
+    slidesToShow: windowWidth <= 1064 ? 1 : 2
   };
 
   return (

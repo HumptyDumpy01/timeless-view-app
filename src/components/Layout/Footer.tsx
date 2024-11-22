@@ -16,12 +16,15 @@ export default function Footer(/*{  }: FooterType*/) {
                                                                            className={`underline`}>timelessview24@gmail.com</a>
         </p>
         <a target={`_blank`} href={OLENAS_INSTAGRAM}
-           className={`flex items-center bp-828:gap-5 mb-5 bp-828:mb-0 uppercase font-italiana bp-828:text-[44px] text-2xl text-zinc-500`}>
+           className={`flex items-center bp-828:gap-5 mb-5 bp-828:mb-0 uppercase font-italiana bp-828:text-[44px] text-2xl text-zinc-500
+           transition-all duration-200 hover:text-white active:text-zinc-600`}>
           <InstagramIcon />
           my instagram
         </a>
       </div>
-      <h2 className={`bp-828:text-[189px] sm:text-nowrap text-6xl m-auto uppercase font-italiana text-center`}>timeless
+      <h2 className={`bp-828:text-[189px] sm:text-nowrap text-6xl m-auto uppercase font-italiana text-center
+      text-zinc-500
+      transition-all duration-300 hover:text-white active:text-zinc-500`}>timeless
         view</h2>
       <div
         className={`flex items-center justify-between text-center sm:text-left text-zinc-700 mb-11 m-auto bp-828:mr-auto`}>

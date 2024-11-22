@@ -13,16 +13,21 @@ import { motion } from 'framer-motion';
 
 function Hero(/*{  }: HeroType*/) {
   return (
-    <motion.section
-      initial={{ opacity: 0, y: 100 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 1 }}
+    <section
       className={`relative max-w-screen-xl px-4 sm:px-9 m-auto pt-7 sm:pt-12`}>
-      <div className={`mb-[76px]`}>
+      <motion.div
+        initial={{ opacity: 0, y: -100 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        className={`mb-[76px]`}>
         <Navigation />
-      </div>
+      </motion.div>
       <div className={`flex flex-col text-left`} id={`aboutMe`}>
-        <div className={`mb-14 hidden bp-828:flex`}>
+        <motion.div
+          initial={{ opacity: 0, x: -100 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1 }}
+          className={`mb-14 hidden bp-828:flex`}>
           <Heading heading={(
             <>
               Turning <HighlightLetter text={`L`} />ife’s
@@ -30,9 +35,13 @@ function Hero(/*{  }: HeroType*/) {
               into Timeless <HighlightLetter text={`A`} />rt
             </>
           )} />
-        </div>
+        </motion.div>
 
-        <div className={`mb-12 hidden bp-1042:flex`}>
+        <motion.div
+          initial={{ opacity: 0, x: -100 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1 }}
+          className={`mb-12 hidden bp-1042:flex`}>
           <Paragraph text={(
             <>
               I am <HighlightText
@@ -43,9 +52,13 @@ function Hero(/*{  }: HeroType*/) {
               audiences.`} />
             </>
           )} />
-        </div>
+        </motion.div>
 
-        <div className={`text-right bp-828:hidden mt-64 mb-14`}>
+        <motion.div
+          initial={{ opacity: 0, x: 100 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1 }}
+          className={`text-right bp-828:hidden mt-64 mb-14`}>
           <span className={`uppercase text-sm mb-3 inline-block`}>professional photographer & videographer</span>
           <Heading heading={(
             <div className={`flex flex-col align-end`}>
@@ -57,9 +70,12 @@ function Hero(/*{  }: HeroType*/) {
               </div>
             </div>
           )} />
-        </div>
+        </motion.div>
 
         <motion.a
+          initial={{ opacity: 0, y: 100 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.3 }}
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
           target={`_blank`}
@@ -70,7 +86,11 @@ function Hero(/*{  }: HeroType*/) {
           </div>
         </motion.a>
       </div>
-      <div className={`absolute text-right -bottom-48 bp-1042:bottom-0 right-0 hidden bp-828:block`}>
+      <motion.div
+        initial={{ opacity: 0, x: 100 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 1 }}
+        className={`absolute text-right -bottom-48 bp-1042:bottom-0 right-0 hidden bp-828:block`}>
         <span className={`uppercase text-sm mb-3 inline-block`}>professional photographer & videographer</span>
         <Heading heading={(
           <div className={`flex flex-col align-end`}>
@@ -82,8 +102,8 @@ function Hero(/*{  }: HeroType*/) {
             </div>
           </div>
         )} />
-      </div>
-    </motion.section>
+      </motion.div>
+    </section>
   );
 }
 

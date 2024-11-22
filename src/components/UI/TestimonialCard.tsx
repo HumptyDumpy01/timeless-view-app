@@ -1,3 +1,6 @@
+import { AnimatePresence, motion } from 'framer-motion';
+import Paragraph from '../Typography/Paragraph.tsx';
+
 interface TestimonialCardType {
   title: string;
   quote: string;
@@ -7,12 +10,15 @@ interface TestimonialCardType {
   // children: ReactNode;
 }
 
-import Paragraph from '../Typography/Paragraph.tsx';
-
 function TestimonialCard({ title, quote, imgSrc, date, initials }: TestimonialCardType) {
   return (
-    <>
-      <div className={`max-w-screen-sm sm:min-w-[530px] px-3 sm:px-0`}>
+    <AnimatePresence>
+      <motion.div
+        initial={{ opacity: 0, y: 100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        viewport={{ once: true }}
+        className={`max-w-screen-sm sm:min-w-[530px] px-3 sm:px-0`}>
         <h2 className={`text-5xl font-italiana uppercase mb-8`}>{title}</h2>
         <div className={`mb-9`}>
           <Paragraph customClasses={`max-w-screen-sm text-zinc-300`} text={(
@@ -30,8 +36,8 @@ function TestimonialCard({ title, quote, imgSrc, date, initials }: TestimonialCa
             <p className={`text-zinc-600 text-sm`}>{date}</p>
           </div>
         </div>
-      </div>
-    </>
+      </motion.div>
+    </AnimatePresence>
   );
 }
 
