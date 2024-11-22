@@ -2,6 +2,7 @@ import { ReactNode } from 'react';
 import ServiceLabel from '../UI/ServiceLabel.tsx';
 import { MyServicesSectionType } from './Sections/MyServicesSection.tsx';
 import scrollTo from '../../../utils/functions/scrollTo.ts';
+import { AnimatePresence, motion } from 'framer-motion';
 
 interface ServiceContainerType {
   label: MyServicesSectionType;
@@ -38,13 +39,18 @@ function ServiceContainer({ label, number, content, open, setActive }: ServiceCo
             </svg>
           </div>
         </div>
-        {open && (
-          <>
-            <div className={`ml-4 mt-14`}>
-              {content}
-            </div>
-          </>
-        )}
+        <AnimatePresence>
+          {open && (
+            <>
+              <motion.div
+                initial={{ opacity: 0, y: 100 }}
+                animate={{ opacity: 1, y: 0 }}
+                className={`ml-4 mt-14`}>
+                {content}
+              </motion.div>
+            </>
+          )}
+        </AnimatePresence>
       </div>
     </>
   );
